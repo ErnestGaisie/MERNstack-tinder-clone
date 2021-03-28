@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
-import axios from "../../../axios";
+import axios from "../../axios";
 
 const TinderCards = () => {
   const [people, setPeople] = useState([]);
@@ -37,7 +37,7 @@ const TinderCards = () => {
             onCardLeftScreen={() => outOfFrame(person.name)}
           >
             <div
-              style={{ backgroundImage: "url(" + person.url + ")" }}
+              style={{ backgroundImage: "url(" + person.imgUrl + ")" }}
               className="card"
             >
               <h3>{person.name}</h3>
